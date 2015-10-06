@@ -1,0 +1,12 @@
+%nav.navbar.navbar-default.navbar-fixed-bottom
+  .container
+    -#.navbar-header
+      %a.navbar-brand{:href => root_path} Clients Directory
+    #navbar.navbar-collapse.collapse
+      %ul.nav.navbar-nav.pull-right
+        %li
+          %a{:href => root_path, style: 'border-bottom: none !important'} Home
+        %li
+          = link_to 'About Us', page_path('about')
+        %li
+          %a{:href => page_path('terms'), style: 'border-bottom: none !important'} Contact Us

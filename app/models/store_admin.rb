@@ -1,0 +1,3 @@
+class StoreAdmin < User
+
+end

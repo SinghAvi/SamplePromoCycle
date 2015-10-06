@@ -1,0 +1,33 @@
+.container{style: "padding: 100px"}
+  .row
+    %div{:align => "center"}
+      %h1
+        Welcome to PromoCycle
+      %p
+        To use our service, Please Sign In or register below :
+  .row
+    .col-md-6{style: "padding-top: 80px"}
+      .div
+        = form_for User.new, url: user_session_path, method: :post do |f|
+          .form-group
+            = f.text_field :name, {class: 'form-control', placeholder: 'Full Name', 'autofocus' => true}
+          .form-group
+            = f.email_field :email, {class: 'form-control', placeholder: 'Email Id', required: true}
+          .form-group
+            = f.password_field :password, {class: 'form-control', placeholder: "Enter Password", required: true}
+          .form-group
+            = f.password_field :password_confirmation, {class: 'form-control', placeholder: "Repeat Password", required: true}
+          .form-group
+            = f.text_area :business, {class: 'form-control', placeholder: 'Business Proposal', style: 'resize: none'}
+          .form-group
+            = f.submit 'Register Here', {class: 'form-control btn btn-info'}
+    .col-md-1
+    .col-md-5
+      %p{style: "padding-top: 80px"}
+        Promocycle acts as a consultant to various organizations working in the field of motorcycle safety. Within the framework of its mandate, Promocycle has participated in the development of numerous studies specific to motorcycle riding.
+        Promocycle acts as a consultant to various organizations working in the field of motorcycle safety. Within the framework of its mandate, Promocycle has participated in the development of numerous studies specific to motorcycle riding.
+        Promocycle acts as a consultant to various organizations working in the field of motorcycle safety. Within the framework of its mandate, Promocycle has participated in the development of numerous studies specific to motorcycle riding.
+        Promocycle acts as a consultant to various organizations working in the field of motorcycle safety. Within the framework of its mandate, Promocycle has participated in the development of numerous studies specific to motorcycle riding.
+  .row
+    .div
+      -#= link_to "Sign In",
